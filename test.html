@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/font-awesome/css/all.css">
+  <link rel="stylesheet" href="/BootStrap4/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/BootStrap4/css/bootstrap.css">
+</head>
+<style>
+  .borders {
+    border: 2px solid gray;
+  }
+
+  .navbars {
+    display: flex;
+    align-items: center;
+  }
+
+  .bg-dar {
+    background-color: rgb(5, 5, 5);
+    height: 5rem;
+  }
+
+  ul li {
+    list-style: none;
+    display: inline;
+  }
+
+  .navbars a {
+    color: white;
+    font-size: 17px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transition: color 0.1s ease-in;
+  }
+
+  .navbars a:hover {
+    color: #d5193b;
+    text-decoration: none;
+    animation-name: goup;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+
+  }
+
+  /* From Uiverse.io by gharsh11032000 */
+  .proj-card {
+    position: relative;
+    width: 100%;
+    height: 30em;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    display: flex;
+    padding: 10px 30px;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .heading {
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffffff;
+  }
+
+  .para {
+    text-align: center;
+    color: #ffffff;
+    opacity: 0.7;
+    line-height: 1.4;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    /* background-color: rgba(0, 0, 0, 0.6); */
+    background-color: whitesmoke;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+  }
+
+  .proj-card:hover .overlay {
+    opacity: 0.5;
+    pointer-events: auto;
+  }
+
+  .proj-card .proj-card-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-weight: 600;
+    padding: 10px 20px;
+    font-size: 16px;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 999;
+    border: none;
+    opacity: 0;
+    scale: 0;
+    transform-origin: 0 0;
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.15);
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+
+  .proj-card:hover .proj-card-btn {
+    opacity: 1;
+    scale: 1;
+  }
+
+  .proj-card .proj-card-btn:hover {
+    box-shadow: 0 0 0px 5px rgba(0, 0, 0, 0.3);
+  }
+
+  .proj-card .proj-card-btn:active {
+    scale: 0.95;
+  }
+
+  .overlay::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(-45deg, #272424 0%, #272424 100%);
+    transition: transform 0.5s ease;
+  }
+
+  .proj-card:hover .overlay::after {
+    transform: translate(-50%, -50%) scale(2);
+  }
+
+  .tracking-in-contract-bck-top {
+    -webkit-animation: tracking-in-contract-bck-top 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    animation: tracking-in-contract-bck-top 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+  }
+
+  @-webkit-keyframes tracking-in-contract-bck-top {
+    0% {
+      letter-spacing: 1em;
+      -webkit-transform: translateZ(400px) translateY(-300px);
+      transform: translateZ(400px) translateY(-300px);
+      opacity: 0;
+    }
+
+    40% {
+      opacity: 0.6;
+    }
+
+    100% {
+      -webkit-transform: translateZ(0) translateY(0);
+      transform: translateZ(0) translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes tracking-in-contract-bck-top {
+    0% {
+      letter-spacing: 1em;
+      -webkit-transform: translateZ(400px) translateY(-300px);
+      transform: translateZ(400px) translateY(-300px);
+      opacity: 0;
+    }
+
+    40% {
+      opacity: 0.6;
+    }
+
+    100% {
+      -webkit-transform: translateZ(0) translateY(0);
+      transform: translateZ(0) translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .proj-img {
+    width: 100%;
+  }
+  .card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 480px;
+  padding: 2px;
+  border-radius: 24px;
+  overflow: hidden;
+  line-height: 1.6;
+  transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 34px;
+  border-radius: 22px;
+  color: #ffffff;
+  overflow: hidden;
+  background: #ffffff;
+  transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.content .heading {
+  font-weight: 700;
+  font-size: 26px;
+  margin: auto;
+  line-height: 1.3;
+  z-index: 1;
+  transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.content .para {
+  z-index: 1;
+  opacity: 0.8;
+  font-size: 18px;
+  transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  height: 170%;
+  width: 170%;
+  border-radius: inherit;
+  background: #0a3cff;
+  background: linear-gradient(to right, #0a3cff, #0a3cff);
+  transform-origin: center;
+  animation: moving 4.8s linear infinite paused;
+  transition: all 0.88s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.card:hover::before {
+  animation-play-state: running;
+  z-index: -1;
+  width: 20%;
+}
+
+.card:hover .content .heading,
+.card:hover .content .para {
+  color: #000000;
+}
+
+.card:hover {
+  box-shadow: 0rem 6px 13px rgba(10, 60, 255, 0.1),
+    0rem 24px 24px rgba(10, 60, 255, 0.09),
+    0rem 55px 33px rgba(10, 60, 255, 0.05),
+    0rem 97px 39px rgba(10, 60, 255, 0.01), 0rem 152px 43px rgba(10, 60, 255, 0);
+  scale: 1.05;
+  color: #000000;
+}
+
+@keyframes moving {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.my-grid{
+  display: grid;
+  grid-template-columns: 10% 90%;
+  border: 2px solid red;
+}
+.boxex{
+  border: 2px solid black;
+}
+@media screen and (max-width:500px){
+  .my-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .boxex{
+    border: 2px solid green;
+  }
+}
+</style>
+
+<body>
+<div class="my-grid  container-fluid">
+  <div class="boxex">h1</div>
+  <div class="boxex">h2</div>
+</div>
+
+<div class="container mt-4">
+  <div class="card">
+    <div class="content">
+      <!-- <p class="heading">Card</p> -->
+       <div class="con" style="height: 5em; width: 5em; border: 2px solid black;display: flex; justify-content: center;align-items: center;z-index: 1000; border-radius: 50%;margin: auto;">
+      <i class="fa-solid fa-desktop fa-2xl" style="color: black;  z-index: 1000;"></i></div>
+      <p class="heading text-center">Web Design & Development</p>
+      <p class="para">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi laboriosam
+        at voluptas minus culpa deserunt delectus sapiente inventore pariatur
+      </p>
+    </div>
+  </div>
+  
+</div>
+
+  <!-- <nav class="navbars bg-dark act main-nav " id="nav">
+    <ul class="pt-4">  
+    <a href="#" class="nav-linked px-3 ml-3 pt-3 ">Home</a>
+    <a href="#" class="nav-linked px-4   ">About Us</a>
+    <a href="#" class="nav-linked px-4   ">Rooms</a>
+    <a href="#" class="nav-linked px-4  ">Dining</a>
+    <a href="#" class="nav-linked px-4 ">Meeting & Events</a>
+    <a href="#" class="nav-linked px-4   ">Multan</a>
+    <a href="#" class="nav-linked px-4  ">Gallery</a>
+    <a href="#" class="nav-linked px-4   ">Contact Us</a>
+  </ul> -->
+  <div class="container">
+    <button class="btn-1" onclick="one()">Click1</button>
+    <button class="btn-2" onclick="two()">Click2</button>
+  </div>
+  <div class="container borders flex-box tracking-in-contract-bck-top"
+    style="display: flex; justify-content: center; align-items: center;">
+    <div class="proj-card ">
+      <!-- <p class="heading">Card Hover</p>
+    <p class="para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.
+    </p>  -->
+      <img src="img/Capture.PNG" alt="" class="proj-img ">
+      <div class="overlay"></div>
+      <button class="proj-card-btn">View All</button>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <P>Hello</P>
+  </div>
+  <div class="container con borders">
+    <span class="text-1 tracking-in-contract-bck-top ml-4 text-center">Technologies I use : </span>
+    <span class="text-2 tracking-in-contract-bck-top  text-center">HTML5</span>
+  </div>
+
+  <div class="container">
+    <svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" >
+      <path fill="currentColor"
+        d="M13.001 19.938a8.001 8.001 0 0 0-1-15.938a8 8 0 0 0-1 15.938V14h-2v-2h2v-1.654c0-1.337.14-1.822.4-2.311A2.73 2.73 0 0 1 12.537 6.9c.382-.205.857-.328 1.687-.381q.494-.032 1.278.08v1.9h-.5c-.917 0-1.296.043-1.522.164a.73.73 0 0 0-.314.314c-.12.226-.164.45-.164 1.368V12h2.5l-.5 2h-2zm-1 2.062c-5.523 0-10-4.477-10-10s4.477-10 10-10s10 4.477 10 10s-4.477 10-10 10" />
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 15 15">
+      <path fill="currentColor" fill-rule="evenodd"
+        d="M12.91 12.909c.326-.327.582-.72.749-1.151c.16-.414.27-.886.302-1.578s.04-.915.04-2.68s-.008-1.987-.04-2.68c-.032-.692-.142-1.164-.302-1.578a3.2 3.2 0 0 0-.75-1.151a3.2 3.2 0 0 0-1.151-.75c-.414-.16-.886-.27-1.578-.302S9.265 1 7.5 1s-1.987.007-2.68.04c-.692.03-1.164.14-1.578.301a3.2 3.2 0 0 0-1.151.75a3.2 3.2 0 0 0-.75 1.151c-.16.414-.27.886-.302 1.578S1 5.735 1 7.5s.007 1.987.04 2.68c.03.692.14 1.164.301 1.578c.164.434.42.826.75 1.151c.325.33.718.586 1.151.75c.414.16.886.27 1.578.302S5.735 14 7.5 14s1.987-.008 2.68-.04c.692-.03 1.164-.14 1.578-.301a3.3 3.3 0 0 0 1.151-.75M2 6.735v1.53c-.002.821-.002 1.034.02 1.5c.026.586.058 1.016.156 1.34c.094.312.199.63.543 1.012c.344.383.675.556 1.097.684c.423.127.954.154 1.415.175c.522.024.73.024 1.826.024H8.24c.842.001 1.054.002 1.526-.02c.585-.027 1.015-.059 1.34-.156c.311-.094.629-.2 1.011-.543c.383-.344.556-.676.684-1.098c.127-.422.155-.953.176-1.414C13 9.247 13 9.04 13 7.947v-.89c0-1.096 0-1.303-.023-1.826c-.021-.461-.049-.992-.176-1.414c-.127-.423-.3-.754-.684-1.098c-.383-.344-.7-.449-1.011-.543c-.325-.097-.755-.13-1.34-.156A27 27 0 0 0 8.24 2H7.057c-1.096 0-1.304 0-1.826.023c-.461.021-.992.049-1.415.176c-.422.128-.753.301-1.097.684s-.45.7-.543 1.012c-.098.324-.13.754-.156 1.34c-.022.466-.022.679-.02 1.5M7.5 5.25a2.25 2.25 0 1 0 0 4.5a2.25 2.25 0 0 0 0-4.5M4.25 7.5a3.25 3.25 0 1 1 6.5 0a3.25 3.25 0 0 1-6.5 0m6.72-2.72a.75.75 0 1 0 0-1.5a.75.75 0 0 0 0 1.5"
+        clip-rule="evenodd" />
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"><path fill="currentColor" d="M10.033 15.3h-1.6v-5.199h1.6zm-.8-5.866q-.866 0-.866-.8a.74.74 0 0 1 .25-.567a.87.87 0 0 1 .616-.233q.866 0 .866.801c0 .801-.288.799-.866.799m6.734 5.866h-1.633v-2.9q0-1.133-.801-1.133q-.632 0-.834.633q-.065.101-.066.4v3H11v-3.533q0-1.2-.033-1.666h1.4l.1.699c.367-.556.9-.833 1.633-.833q.835 0 1.35.583q.518.583.518 1.684V15.3zM12 21c-4.963 0-9-4.037-9-9s4.037-9 9-9s9 4.037 9 9s-4.037 9-9 9m0-16c-3.859 0-7 3.141-7 7s3.141 7 7 7s7-3.141 7-7s-3.141-7-7-7"/></svg>  <script>
+
+
+
+    let t2 = document.querySelector('.text-2');
+    function Remover() {
+      setTimeout(() => {
+        t2.innerHTML = 'HTML5';
+      }, 0)
+      setTimeout(() => {
+        t2.innerHTML = 'CSS3';
+      }, 3000)
+      setTimeout(() => {
+        t2.innerHTML = 'JavaScript';
+      }, 6000)
+      setTimeout(() => {
+        t2.innerHTML = 'BootStrap';
+      }, 9000)
+    }
+    Remover();
+    setInterval(Remover, 12000);
+
+
+
+    let nav = document.querySelectorAll('.nav-linked');
+    nav.forEach((element) => {
+      element.addEventListener('click', function () {
+        nav.forEach((element) => {
+          element.classList.remove('activ');
+        })
+        this.classList.add('activ');
+      })
+    })
+
+    let im = document.querySelector('.proj-img');
+    function one() {
+      im.src = 'img/Capture1.png';
+      im.classList.add('tracking-in-contract-bck-top');
+      setTimeout(() => {
+        im.classList.remove('tracking-in-contract-bck-top');
+      }, 1000)
+
+    }
+    function two() {
+      im.src = 'img/Capture.png'
+      im.classList.add('tracking-in-contract-bck-top');
+      setTimeout(() => {
+        im.classList.remove('tracking-in-contract-bck-top');
+      }, 1000)
+    }
+
+  </script>
+  <script src="/BootStrap4/js/jquery.js"></script>
+  <script src="/BootStrap4/js/bootstrap.js"></script>
+</body>
+
+</html>
