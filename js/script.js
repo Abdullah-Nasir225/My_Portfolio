@@ -89,25 +89,37 @@ if(bodyid === "home"){
   function Change(){
     setTimeout(()=>{
       second.textContent = 'HTML5'
-      second.classList.toggle('opac');
+      second.classList.add('text-focus-in');
     },0)
-    
+    setTimeout(() => {
+        second.classList.remove('text-focus-in');
+    }, 1000);
     setTimeout(()=>{
       second.textContent = 'CSS3'
-      second.classList.toggle('opac');
-    },1000)
+      second.classList.add('text-focus-in');
+    },2000)
+    setTimeout(() => {
+      second.classList.remove('text-focus-in');
+  }, 3000);
+
     setTimeout(()=>{
       second.textContent = 'JavaScript'
-      second.classList.toggle('opac');
-    },2000)
-    
+      second.classList.add('text-focus-in');
+    },4000)
+    setTimeout(() => {
+      second.classList.remove('text-focus-in');
+  }, 5000);
+  
     setTimeout(()=>{
       second.textContent = 'BootStrap'
-      second.classList.toggle('opac');
-    },3000)
+      second.classList.add('text-focus-in');
+    },6000)
+    setTimeout(() => {
+        second.classList.remove('text-focus-in')
+    }, 7000);
   }
   Change();
-  setInterval(Change,4000)
+  setInterval(Change,8000)
   
   
   let pro  = document.querySelectorAll('.pro-btn');
@@ -146,40 +158,32 @@ if(bodyid === "home"){
   }
   }
 
-  const blink = document.querySelector('.cursor-div');
-  // const para = document.querySelector('.standard-para');
-  blink.classList.add('dis');
-  
-    setTimeout(() => {
-      blink.classList.remove('dis');
-      // para.classList.remove('dis');
-    }, 1000);    
-  setInterval(()=>{
-        blink.classList.toggle('blink');
-      },100)
+
       
   // })();
   
   // This will load the animation
     
-  function Sub(){
-  
-    let mail = document.querySelector('.input-mail').value;
-    let mail_val = document.querySelector('.input-mail');
-  
-    let para = document.querySelector('.sub-para');
-    
-    if(mail.includes("@") ){
-      para.innerHTML = "Submitted"
-      mail_val.value = "";
-    
-      setTimeout(()=>{
-        window.location.reload();
-      },2000)
-    
-    }
-    else{
-      para.innerHTML = "Enter a valid email address...";
-    }
-  }
+ 
+  function sendEmail() {
+    window.location.href = "mailto:abdullahnasirab23@gmail.com?subject=Subject%20Here&body=Hello%20there!";
+}
 
+function submitted(){
+  let first = document.querySelector('.fst-area').value;
+  let last = document.querySelector('.lst-area').value;
+  let mail = document.querySelector('.mal-area').value;
+  let contact = document.querySelector('.cnt-area').value;
+  let text = document.querySelector('.txt-area').value;
+
+
+  if(first != null && last != null && mail != null && contact != null && text != null){
+    alert("Thanks you!");
+    setTimeout(() => {
+      window.location.reload();
+    }, 3000);
+  }
+ 
+
+
+}
