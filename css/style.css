@@ -950,7 +950,7 @@ z-index: 1000;
 .fun{
   height: 20em;
   width: 100%;
-  background-image: url('./img/funn.png');
+  background-image: url('img/funn.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position-x: center;
@@ -1003,7 +1003,7 @@ z-index: 1000;
   background-color: rgb(241, 166, 25);
 }
 #contact-form{
-  background-image: url('./img/contact.jpg');
+  background-image: url('img/contact.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
