@@ -145,7 +145,7 @@ if(bodyid === "home"){
     let proj_name  =  document.querySelector('.heading');
     let proj = document.querySelector('.proj-contain');
   function btn1(){
-    pro_img.src = '../img/Capture1.png';
+    pro_img.src = '../img/Capture1.PNG';
   
     proj_name.innerHTML = 'Design & Develop Responsive Agriculture Site';
     pro_img.classList.add('text-focus-in');
@@ -156,7 +156,7 @@ if(bodyid === "home"){
     },1000)
   }
   function btn2(){
-    pro_img.src = '../img/Capture.png';
+    pro_img.src = '../img/Capture.PNG';
     proj_name.innerHTML = 'Design & Develop Responsive Luxury Restaurant Site';
     pro_img.classList.add('text-focus-in');
     proj_name.classList.add('text-focus-in');
