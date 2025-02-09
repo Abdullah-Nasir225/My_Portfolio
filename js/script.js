@@ -117,9 +117,18 @@ if(bodyid === "home"){
     setTimeout(() => {
         second.classList.remove('text-focus-in')
     }, 7000);
+    
+    setTimeout(()=>{
+      second.textContent = 'Figma'
+      second.classList.add('text-focus-in');
+    },8000)
+    setTimeout(() => {
+        second.classList.remove('text-focus-in')
+    }, 9000);
+    
   }
   Change();
-  setInterval(Change,8000)
+  setInterval(Change,10000)
   
   
   let pro  = document.querySelectorAll('.pro-btn');
