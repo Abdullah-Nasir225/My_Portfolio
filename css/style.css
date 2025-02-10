@@ -422,12 +422,12 @@ background-color: whitesmoke;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: no-wrap;
+  flex-wrap: wrap;
   gap: 2em;
 }
 .services-box{
-  height: 14em;
-  width: 14em;
+  height: 16em;
+  width: 16em;
   border: 5px solid rgb(228, 213, 0);
   border-top-right-radius: 50px;
   border-bottom-left-radius: 50px;
