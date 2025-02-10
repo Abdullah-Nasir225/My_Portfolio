@@ -422,8 +422,8 @@ background-color: whitesmoke;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 2.5em;
+  flex-wrap: no-wrap;
+  gap: 2em;
 }
 .services-box{
   height: 14em;
