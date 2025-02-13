@@ -302,7 +302,7 @@ z-index: 1000;
   background-repeat: no-repeat;
   background-size: cover;
   /* background-position-x: center; */
-  background-attachment: scroll;
+  background-attachment: fixed;
 }
 /* Projects Page Starts  */
 .recent-projects{
@@ -607,7 +607,7 @@ z-index: 1000;
   background-repeat: no-repeat;
   background-size: cover;
   background-position-x: center;
-  background-attachment: scroll;
+  background-attachment: fixed;
 }
 /* Projects Page Starts  */
 .recent-projects{
@@ -717,7 +717,7 @@ z-index: 1000;
   background-image: url('../img/funn.png');
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: scroll;
+  background-attachment: fixed;
   background-position-x: center;
 }
     }
