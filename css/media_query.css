@@ -298,7 +298,7 @@ z-index: 1000;
 {
   /* height: 16em; */
   width: 100%;
-  background-image: url('/img/funn.png');
+  background-image: url('../img/funn.png');
   background-repeat: no-repeat;
   background-size: cover;
   /* background-position-x: center; */
@@ -603,7 +603,7 @@ z-index: 1000;
 .fun{
   height: 18em;
   width: 100%;
-  background-image: url('/img/funn.png');
+  background-image: url('../img/funn.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position-x: center;
@@ -714,7 +714,7 @@ z-index: 1000;
 .fun{
   height: 20em;
   width: 100%;
-  background-image: url('/img/funn.png');
+  background-image: url('../img/funn.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: scroll;
