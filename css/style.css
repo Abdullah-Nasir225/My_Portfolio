@@ -1291,3 +1291,6 @@ background-color: whitesmoke;
 .light{
   background-color: white;
 }
+.fix{
+	position:fixed;
+}
