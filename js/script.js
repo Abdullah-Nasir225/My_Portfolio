@@ -20,6 +20,7 @@ ham.addEventListener('click',(()=>{
     s1.classList.toggle('rotate1');
     s2.classList.toggle('dis');
     s3.classList.toggle('rotate2');
+    document.body.classList.toggle('fix');
 
   }))
 
