@@ -142,7 +142,7 @@ if(bodyid === "home"){
       this.classList.add('bg-yellow');
     })
   })
-    let pro_img =  document.querySelector('#proj-img');
+    let pro_img =  document.querySelector('#pro-img');
     let proj_name  =  document.querySelector('.heading');
     let proj = document.querySelector('.proj-contain');
   function btn1(){
