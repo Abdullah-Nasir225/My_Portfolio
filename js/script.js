@@ -4,9 +4,9 @@ const bodyid = document.body.id;
 window.addEventListener('load',(()=>{
   let loader = document.querySelector('.load');
   loader.classList.add('load-hidden');
-  loader.addEventListener('transitionend',(()=>{
-    document.removeChild('loader');
-  }))
+  // loader.addEventListener('transitionend',(()=>{
+  //   document.removeChild('loader');
+  // }))
 }))
 
 // Toggler mavigation menu
