@@ -77,7 +77,13 @@ scroll.addEventListener('mouseenter',(()=>{
         },1000)
     }))
   })
-
+ window.addEventListener('load',(()=>{
+  let loader = document.querySelector('.load');
+  loader.classList.add('load-hidden');
+  loader.addEventListener('transitionend',(()=>{
+    document.removeChild('loader');
+  }))
+}))
 if(bodyid === "home"){
   let second = document.querySelector('.second-text');
   function Change(){
@@ -186,13 +192,7 @@ function submitted(){
       window.location.reload();
     }, 3000);
   }
- window.addEventListener('load',(()=>{
-  let loader = document.querySelector('.load');
-  loader.classList.add('load-hidden');
-  loader.addEventListener('transitionend',(()=>{
-    document.removeChild('loader');
-  }))
-}))
+
 
 
 
