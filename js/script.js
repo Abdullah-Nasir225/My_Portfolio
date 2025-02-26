@@ -1,13 +1,7 @@
 
 const bodyid = document.body.id;
 
- window.addEventListener('load',(()=>{
-  let loader = document.querySelector('.load');
-  loader.classList.add('load-hidden');
-  loader.addEventListener('transitionend',(()=>{
-    document.removeChild('loader');
-  }))
-}))
+
 // Toggler mavigation menu
 const ham =  document.querySelector('.hamburgers');
 ham.addEventListener('click',(()=>{
@@ -58,7 +52,13 @@ scroll.addEventListener('mouseenter',(()=>{
   let arr = document.querySelector('.arr');
   arr.style.Color = "rgb(248, 182, 60)";
 }))
-
+ window.addEventListener('load',(()=>{
+  let loader = document.querySelector('.load');
+  loader.classList.add('load-hidden');
+  loader.addEventListener('transitionend',(()=>{
+    document.removeChild('loader');
+  }))
+}))
   const all_img1 = document.querySelectorAll('.small-img1');
   const big1 = document.querySelector('.big-img1');
   const all_img2 = document.querySelectorAll('.small-img2');
