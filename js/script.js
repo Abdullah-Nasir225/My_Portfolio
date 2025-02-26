@@ -17,6 +17,13 @@ ham.addEventListener('click',(()=>{
 
   }))
 
+ window.addEventListener('load',(()=>{
+  let loader = document.querySelector('.load');
+  loader.classList.add('load-hidden');
+  loader.addEventListener('transitionend',(()=>{
+    document.removeChild('loader');
+  }))
+}))
 
 let nav = document.querySelectorAll('.nav-linked');
 
@@ -79,13 +86,7 @@ scroll.addEventListener('mouseenter',(()=>{
   })
 
 if(bodyid === "home"){
- window.addEventListener('load',(()=>{
-  let loader = document.querySelector('.load');
-  loader.classList.add('load-hidden');
-  loader.addEventListener('transitionend',(()=>{
-    document.removeChild('loader');
-  }))
-}))
+
     
   let second = document.querySelector('.second-text');
   function Change(){
