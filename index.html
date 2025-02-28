@@ -251,7 +251,35 @@
   <script src="BootStrap4/js/jquery.js"></script>
     <script src="BootStrap4/js/bootstrap.js"></script>
     <script src="js/script.js"></script>
+<script>
+   let proj_name  =  document.querySelector('.heading');
+    let proj = document.querySelector('.proj-contain');
+    let pro_img =  document.querySelector('#pro-img');
 
+    function btn1(){
+    pro_img.src='img/capture1.png';
+  
+    proj_name.innerHTML = 'Design & Develop Responsive Agriculture Site';
+    pro_img.classList.add('text-focus-in');
+    proj_name.classList.add('text-focus-in');
+    setTimeout(()=>{
+      pro_img.classList.remove('text-focus-in');
+      proj_name.classList.remove('text-focus-in');
+    },1000)
+  }
+  function btn2(){
+    pro_img.src='img/capture.png';
+    proj_name.innerHTML = 'Design & Develop Responsive Luxury Restaurant Site';
+    pro_img.classList.add('text-focus-in');
+    proj_name.classList.add('text-focus-in');
+    setTimeout(()=>{
+      pro_img.classList.remove('text-focus-in');
+      proj_name.classList.remove('text-focus-in');
+    },1000)
+  }
+  }
+
+</script>
 </body>
 
 </html>
