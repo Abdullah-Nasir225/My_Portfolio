@@ -145,7 +145,7 @@ if(bodyid === "home"){
     })
   })
 
-   
+     }
 
       
   // })();
@@ -171,8 +171,4 @@ function submitted(){
       window.location.reload();
     }, 3000);
   }
-
-
-
-
 }
