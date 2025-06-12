@@ -128,6 +128,28 @@ if(bodyid === "home"){
     setTimeout(() => {
         second.classList.remove('text-focus-in')
     }, 9000);
+    setTimeout(()=>{
+      second.textContent = 'React'
+      second.classList.add('text-focus-in');
+    },10000)
+    setTimeout(() => {
+        second.classList.remove('text-focus-in')
+    }, 11000);
+    setTimeout(()=>{
+      second.textContent = 'WordPress'
+      second.classList.add('text-focus-in');
+    },12000)
+    setTimeout(() => {
+        second.classList.remove('text-focus-in')
+    }, 13000);
+    
+    setTimeout(()=>{
+      second.textContent = 'Material UI'
+      second.classList.add('text-focus-in');
+    },14000)
+    setTimeout(() => {
+        second.classList.remove('text-focus-in')
+    }, 15000);
     
   }
   Change();
