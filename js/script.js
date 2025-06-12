@@ -173,7 +173,7 @@ if(bodyid === "home"){
   // })();
   
   // This will load the animation
-    
+     
  
   function sendEmail() {
     window.location.href = "mailto:abdullahnasirab23@gmail.com?subject=Subject%20Here&body=Hello%20there!";
