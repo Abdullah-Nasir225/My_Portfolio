@@ -153,7 +153,7 @@ if(bodyid === "home"){
     
   }
   Change();
-  setInterval(Change,10000)
+  setInterval(Change,16000)
   
   
   let pro  = document.querySelectorAll('.pro-btn');
